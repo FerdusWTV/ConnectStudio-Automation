@@ -72,4 +72,36 @@ print(f'Organization Name: {org_name}')
 # click the create portal btn
 driver.find_element(By.XPATH, "//li[@class='show']").click()
 
+# ======================================================================================================================
+# branding page fillup
+
+# # select organization
+# driver.find_element(By.ID, "rc_select_0").click()
+# org_menu = driver.find_element(By.XPATH, "//div[@class='rc-virtual-list-holder']")
+# driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", org_menu)
+# driver.find_element(By.XPATH, "//div[@title='Automated Test ORG']").click()
+
+# # select client
+# driver.find_element(By.ID, "rc_select_1").click()
+# client_menu = driver.find_element(By.CLASS_NAME, "rc-virtual-list-holder-inner")
+# driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", client_menu)
+# driver.find_element(By.XPATH, "//div[contains(text(),'AUTO')]").click()
+
+# # Template style (optional)
+# driver.find_element(By.XPATH, "//div[@data-testid='template-style']").click()
+# template = wait.until(expected_conditions.element_to_be_clickable((By.XPATH, "//div[@title='Material - popular user experience style comprised of 3D elements']")))
+# template.click()
+
+# # header menu logo
+# logo = driver.find_element(By.XPATH, "(//div)[111]")
+# driver.execute_script("arguments[0].scrollIntoView(true);", logo)
+# driver.execute_script("arguments[0].click();", logo)
+
+# registration email image
+reg_email_image = driver.find_element(By.XPATH, "(//div)[123]")
+driver.execute_script("arguments[0].scrollIntoView(true);", reg_email_image)
+driver.execute_script("arguments[0].click();", reg_email_image)
+
+
+
 time.sleep(3)
