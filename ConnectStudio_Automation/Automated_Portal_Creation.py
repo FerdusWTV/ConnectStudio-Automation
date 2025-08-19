@@ -75,33 +75,49 @@ driver.find_element(By.XPATH, "//li[@class='show']").click()
 # ======================================================================================================================
 # branding page fillup
 
-# # select organization
-# driver.find_element(By.ID, "rc_select_0").click()
-# org_menu = driver.find_element(By.XPATH, "//div[@class='rc-virtual-list-holder']")
-# driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", org_menu)
-# driver.find_element(By.XPATH, "//div[@title='Automated Test ORG']").click()
+# select organization
+driver.find_element(By.ID, "rc_select_0").click()
+org_menu = driver.find_element(By.XPATH, "//div[@class='rc-virtual-list-holder']")
+driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", org_menu)
+driver.find_element(By.XPATH, "//div[@title='Automated Test ORG']").click()
 
-# # select client
-# driver.find_element(By.ID, "rc_select_1").click()
-# client_menu = driver.find_element(By.CLASS_NAME, "rc-virtual-list-holder-inner")
-# driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", client_menu)
-# driver.find_element(By.XPATH, "//div[contains(text(),'AUTO')]").click()
+# select client
+driver.find_element(By.ID, "rc_select_1").click()
+client_menu = driver.find_element(By.CLASS_NAME, "rc-virtual-list-holder-inner")
+driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", client_menu)
+driver.find_element(By.XPATH, "//div[contains(text(),'AUTO')]").click()
 
-# # Template style (optional)
-# driver.find_element(By.XPATH, "//div[@data-testid='template-style']").click()
-# template = wait.until(expected_conditions.element_to_be_clickable((By.XPATH, "//div[@title='Material - popular user experience style comprised of 3D elements']")))
-# template.click()
+# Template style (optional)
+driver.find_element(By.XPATH, "//div[@data-testid='template-style']").click()
+template = wait.until(expected_conditions.element_to_be_clickable((By.XPATH, "//div[@title='Material - popular user experience style comprised of 3D elements']")))
+template.click()
 
-# # header menu logo
-# logo = driver.find_element(By.XPATH, "(//div)[111]")
-# driver.execute_script("arguments[0].scrollIntoView(true);", logo)
-# driver.execute_script("arguments[0].click();", logo)
+# header menu logo
+logo = driver.find_element(By.XPATH, "(//div)[111]")
+driver.execute_script("arguments[0].scrollIntoView(true);", logo)
+driver.execute_script("arguments[0].click();", logo)
+logo.send_keys("C:\Users\Tulip\OneDrive - TulipTech LTD\Desktop\logo007.png")
 
 # registration email image
 reg_email_image = driver.find_element(By.XPATH, "(//div)[123]")
 driver.execute_script("arguments[0].scrollIntoView(true);", reg_email_image)
 driver.execute_script("arguments[0].click();", reg_email_image)
+reg_email_image.send_keys()
 
+# # background color (NN)
+# bg_color = driver.find_element(By.CLASS_NAME, 'choose-font-color-input')
+# driver.execute_script("arguments[0].scrollIntoView(true);", bg_color)
+# driver.execute_script("arguments[0].click();", bg_color)
+# # write color hex
+# color_hex = driver.find_element(By.CLASS_NAME, "rcp-fields-element-input")
+# new_value = "#8af8eb"
+# driver.execute_script("arguments[0].click();", color_hex)
+# driver.execute_script("arguments[0].value = arguments[1];", color_hex, new_value)
+
+# save button
+save_btn = driver.find_element(By.CLASS_NAME, "custom-save-btn")
+driver.execute_script("arguments[0].scrollIntoView(true);", save_btn)
+save_btn.click()
 
 
 time.sleep(3)
