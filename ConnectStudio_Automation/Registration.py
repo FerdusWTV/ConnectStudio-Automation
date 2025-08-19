@@ -37,7 +37,12 @@ wait.until(expected_conditions.presence_of_element_located((By.CLASS_NAME, 'swal
 #dashboard page validation
 welcome = driver.find_element(By.CLASS_NAME, 'header-title').text
 print(f'welcome: {welcome}')
-assert 'Welcome' in welcome
+
+# ======================================================================================================================
+
+# assert
+assert 'Welcome' in welcome, "Test Failed: LOgin Unsuccessful"
+print("Test Passed: Login Successful")
 
 
 time.sleep(5)
